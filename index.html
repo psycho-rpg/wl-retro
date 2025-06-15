@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servidor Gamer Retrô</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', monospace;
+      background: url('https://sm.ign.com/t/ign_br/screenshot/default/top-25-wii-u-games-spring-2015-fze4640_avjk.1200.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px 10px;
+      backdrop-filter: blur(5px);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    p.description {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 15px auto 30px;
+      line-height: 1.6;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .btn {
+      background: #00ff99;
+      color: #000;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #00cc7a;
+    }
+
+    #formulario, #linkServidor {
+      display: none;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    input, select {
+      width: 90%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    #linkServidor a {
+      color: #00ffcc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    #linkServidor a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Seja bem-vindo ao nosso servidor Gamer Retrô</h1>
+    <p class="description">
+      Reviva os dias dourados do fliperama com uma pitada de nostalgia digital! Aqui celebramos os clássicos,
+      os 8 bits, os glitches charmosos e o espírito raiz dos jogos que marcaram gerações. A diversão é retrô, mas a vibe é eterna!
+    </p>
+    <button class="btn" onclick="mostrarFormulario()">Entrar no Servidor</button>
+  </header>
+
+  <div id="formulario">
+    <h2>Registro de Membro</h2>
+    <input type="text" placeholder="Nome completo" required>
+    <input type="text" placeholder="Nickname" required>
+    <input type="text" placeholder="Quem te convidou?" required>
+    <input type="text" placeholder="Level">
+    <input type="text" placeholder="Vocação">
+    <select>
+      <option value="">Apply feito?</option>
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select>
+    <br>
+    <button class="btn" onclick="finalizarRegistro()">Finalizar Registro</button>
+  </div>
+
+  <div id="linkServidor">
+    <h2>🎉 Registro Concluído!</h2>
+    <p>Acesse nosso servidor clicando abaixo:</p>
+    <a href="https://discord.gg/kYY2JY99" target="_blank">👉 Entrar no Servidor Discord 👈</a>
+  </div>
+
+  <script>
+    function mostrarFormulario() {
+      document.getElementById("formulario").style.display = "block";
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function finalizarRegistro() {
+      document.getElementById("formulario").style.display = "none";
+      document.getElementById("linkServidor").style.display = "block";
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+  </script>
+
+</body>
+</html>
